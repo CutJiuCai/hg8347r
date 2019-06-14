@@ -16,6 +16,7 @@ type Router struct {
 
 // Device info
 type Device struct {
+	Domain      string
 	HostName    string
 	IPAddr      string `json:"IpAddr"`
 	MacAddr     string
@@ -23,7 +24,7 @@ type Device struct {
 	PortID      string
 	TrafficSend string
 	TrafficRecv string
-	DevStatus   string
+	DevStatus   string // Online | Offline
 	IPType      string `json:"IpType"` // DHCP or STATIC
 	Time        string // online time, format is mm:ss
 }
